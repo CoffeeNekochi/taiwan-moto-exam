@@ -202,7 +202,7 @@ export default function ResultScreen() {
                   <p className={styles.wrongQ}>{q.text}</p>
                   {q.image && (
                     <div className={styles.imageContainer}>
-                      <img src={q.image} alt="Question Graphic" className={styles.qImage} />
+                      <img src={import.meta.env.BASE_URL + q.image.replace(/^\//, '')} alt="Question Graphic" className={styles.qImage} />
                     </div>
                   )}
                   <div className={styles.wrongAnswers}>

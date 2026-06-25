@@ -118,7 +118,7 @@ export default function ExamScreen() {
         <p className={styles.questionText}>{currentQ.text}</p>
         {currentQ.image && (
           <div className={styles.imageContainer}>
-            <img src={currentQ.image} alt="Question Graphic" className={styles.qImage} />
+            <img src={import.meta.env.BASE_URL + currentQ.image.replace(/^\//, '')} alt="Question Graphic" className={styles.qImage} />
           </div>
         )}
       </div>
